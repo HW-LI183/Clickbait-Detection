@@ -1,0 +1,5891 @@
+{
+  "inputs_sha256": {
+    "records.jsonl": "32565c7f5fbb19c8fe6b43e6aa93bb0087eb95f1cb02db5fada8bbf5b68ed8e8",
+    "split_manifest.jsonl": "bc2beac9643deaed65a9a775f6ab4734fc5136ad7162df7f549c4f7debe212cd"
+  },
+  "split_sizes": [
+    13506,
+    2894,
+    2894
+  ],
+  "settings": {
+    "limits": [
+      5000,
+      5000,
+      15000
+    ],
+    "ngram": [
+      1,
+      2
+    ],
+    "weights": [
+      1,
+      1,
+      1
+    ]
+  },
+  "runtime": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "sklearn": "1.9.1",
+    "batch_size": 2894,
+    "shared_tfidf_transform_seconds": 1.4349710000678897
+  },
+  "majority": {
+    "macro_f1": 0.431434184675835,
+    "clickbait_precision": 0.0,
+    "clickbait_recall": 0.0,
+    "clickbait_f1": 0.0,
+    "average_precision": 0.24118866620594334,
+    "confusion_matrix": [
+      [
+        2196,
+        0
+      ],
+      [
+        698,
+        0
+      ]
+    ]
+  },
+  "models": {
+    "A/logistic_regression": {
+      "C": 1.0,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7404602049077357,
+      "batch_classifier_seconds": 0.00013135000481270253,
+      "macro_f1": 0.740915857301979,
+      "clickbait_precision": 0.656896551724138,
+      "clickbait_recall": 0.5458452722063037,
+      "clickbait_f1": 0.596244131455399,
+      "average_precision": 0.6489073378635968,
+      "confusion_matrix": [
+        [
+          1997,
+          199
+        ],
+        [
+          317,
+          381
+        ]
+      ]
+    },
+    "A/linear_svm": {
+      "C": 0.1,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7463690261415314,
+      "batch_classifier_seconds": 0.0001332299958448857,
+      "macro_f1": 0.7461891606539903,
+      "clickbait_precision": 0.6408227848101266,
+      "clickbait_recall": 0.5802292263610315,
+      "clickbait_f1": 0.6090225563909775,
+      "average_precision": 0.6504488778541199,
+      "confusion_matrix": [
+        [
+          1969,
+          227
+        ],
+        [
+          293,
+          405
+        ]
+      ]
+    },
+    "B/logistic_regression": {
+      "C": 10.0,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7336581962272637,
+      "batch_classifier_seconds": 0.00015652999863959848,
+      "macro_f1": 0.726975473676793,
+      "clickbait_precision": 0.5969924812030075,
+      "clickbait_recall": 0.5687679083094556,
+      "clickbait_f1": 0.5825385179750551,
+      "average_precision": 0.614255923386449,
+      "confusion_matrix": [
+        [
+          1928,
+          268
+        ],
+        [
+          301,
+          397
+        ]
+      ]
+    },
+    "B/linear_svm": {
+      "C": 0.1,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7389503811616613,
+      "batch_classifier_seconds": 0.00017788499826565385,
+      "macro_f1": 0.7393762331417832,
+      "clickbait_precision": 0.6423841059602649,
+      "clickbait_recall": 0.5558739255014327,
+      "clickbait_f1": 0.5960061443932412,
+      "average_precision": 0.6523405768946452,
+      "confusion_matrix": [
+        [
+          1980,
+          216
+        ],
+        [
+          310,
+          388
+        ]
+      ]
+    },
+    "C/logistic_regression": {
+      "C": 1.0,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7689699625413768,
+      "batch_classifier_seconds": 0.0018060550035443157,
+      "macro_f1": 0.767617290532993,
+      "clickbait_precision": 0.7068062827225131,
+      "clickbait_recall": 0.5802292263610315,
+      "clickbait_f1": 0.6372934697088907,
+      "average_precision": 0.7027422646060545,
+      "confusion_matrix": [
+        [
+          2028,
+          168
+        ],
+        [
+          293,
+          405
+        ]
+      ]
+    },
+    "C/linear_svm": {
+      "C": 0.1,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7723445404663033,
+      "batch_classifier_seconds": 0.0016856700007338078,
+      "macro_f1": 0.772674406524468,
+      "clickbait_precision": 0.685214626391097,
+      "clickbait_recall": 0.6174785100286533,
+      "clickbait_f1": 0.6495855312735493,
+      "average_precision": 0.705352572337197,
+      "confusion_matrix": [
+        [
+          1998,
+          198
+        ],
+        [
+          267,
+          431
+        ]
+      ]
+    }
+  },
+  "primary_contrasts": {
+    "C-A": {
+      "delta": 0.026701433231014038,
+      "ci95": [
+        0.010094895784835032,
+        0.04481058684968049
+      ]
+    },
+    "C-B": {
+      "delta": 0.04064181685619994,
+      "ci95": [
+        0.023993542246663904,
+        0.05864743850969361
+      ]
+    }
+  },
+  "changed_predictions": [
+    {
+      "id": "804134698729385984",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804358147477569536",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804743436024893440",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805011265559072769",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805789636425646084",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805811153834229760",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805868448244961280",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806263201398669313",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806630890575134720",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806995799548669952",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807128653238673408",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807230048365322240",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807266411332640768",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807478959428358144",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807517212017852416",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807634993975533568",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807796960379961344",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808061798758785024",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808185358731112448",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "808377379965976576",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "808449697375469569",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "808745580751155200",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809088097375887360",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809170114746712068",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809524728327184386",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809685278583640064",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809852171835609088",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "810143030531543040",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810394172389625857",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "810620677132873729",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811091321276530688",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811231443888275456",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811773933481553920",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811843742311260160",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811945895281442816",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811972338266861568",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812060144632664064",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812279597400199168",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812493001226391552",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812540534531194880",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812621343896326145",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812659354767855616",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812898185828044800",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813066898283917313",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813097214826467328",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813110469888184320",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813265588021850112",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813746111924097024",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813939777791787009",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813942553460572160",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "814177667318763520",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814650104217006085",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814832362911571969",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "814884369563271168",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814915453831225344",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "815131952948781056",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815159009477087236",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815333545220734976",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815928915072053248",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816225387697020928",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816284274169090048",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816312333463126016",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816388686979928064",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816471416275083265",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816738485168173056",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817106413478617088",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817604699616673792",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817702849702465536",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817747639177478144",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818419582901817344",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818446558152851457",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818529033499643904",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818611210186674178",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818651042011344898",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818653806376292352",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818676008358395905",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818774408974270466",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818825368341716992",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818945907437801473",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819248206244675585",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "819253810157776896",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "819707891473125378",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "819978313326268416",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820173928127721473",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820280114684563456",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820292451709685760",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820319576462331905",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820655705971687424",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820752427372740609",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821050912693223428",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821129915386957824",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821194068856291328",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821592090702385153",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821936363058495488",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822205856158781440",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822259513734664192",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822360517196926977",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822381333360033792",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822432274327150592",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822482257449545729",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822509157215596549",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822609728366870534",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822657492878553092",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822792639741394944",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "823560825130643456",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "823778089511645184",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "824295310704996352",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824512617914007552",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824669170965053444",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824716979416207360",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825061089914269696",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "825313726744059905",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825355518763995136",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "825554063408365568",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825727706838990848",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825812011225276418",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "825882473766776834",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "826104376175493120",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "826930614112702464",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827373064572772352",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827566750539591683",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827611136828768257",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827964706795159553",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "828780509622837249",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828878101010587648",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "828991975156219904",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829086385458012161",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829166951616245761",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829224690203951108",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829395541805191171",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830003378994425856",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830063794051227649",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830083597855924224",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830084013075357696",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830312927399907328",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830428493888512001",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830473093604864001",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830476752342376448",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830592479300812800",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830782889742569472",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830876477377880066",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830975030200823808",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831184691923398657",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831483793999532032",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831638657790513155",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831669359647084544",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831810269236121600",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831930090409701376",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832375219838865408",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832529627000270849",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "832636637079334913",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "832958026462134272",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833494519198908416",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834073543277174784",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834076761499500545",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834567019718656000",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834878005935734784",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "835253428460802048",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "835285980030521344",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "835927678054191105",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836258856053374977",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "836285112429887488",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836292279912415232",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836348700574146560",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "837388813517357057",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "837685269969186816",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837860150513917952",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837869432873627648",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "837890623080386560",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837981005281652736",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838276145644634112",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838541765346918400",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838598935367274497",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838729134276820993",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839014265214349312",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839124962355134466",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839479556188823553",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839550191132778496",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839658247736930304",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839782069156921344",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839810114278330368",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "840137676460240897",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840138567070371841",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840217846894481409",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "840866948816744448",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "840939527522963456",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841469068494458880",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841680309406056448",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841715429135532034",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842173357164490752",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842386993032114177",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842666332822953984",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842700315057176576",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842860474974834688",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843507361704742912",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "844696047129628674",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "845120547751018498",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845751634953166848",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845752845123117058",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846310292732678144",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846398304531435521",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846444606518673409",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846806366018768897",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846962645072859137",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847146906245644288",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847478555168481282",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847486246586679304",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847518771694702592",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847769225712324608",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848152330512064512",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848191272095494144",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848338103022518276",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848343733410172928",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848582467275673600",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848609804071444481",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848610335204532226",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848815992268439553",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848823157691691009",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848991034885492739",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849088340683100160",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849273610896363521",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849444152408518656",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849738441973788672",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850017478730297345",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850370124200763392",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850400281963757569",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850794137523810304",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851049559862067203",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "851372958467706880",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851479918970122240",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "851569236745089025",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851802030507216900",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "851835988213149699",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852057713668493312",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852354543283306496",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852435548585185281",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852722791589625856",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852972227863523328",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853046492961091587",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853069145344270337",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853548532032315394",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853734443072311298",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853842965231525888",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854186510064734209",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854305973355372545",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854379006505791488",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854393400619139074",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854583199292248064",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854741108252958720",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854801793351659520",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854841576094404608",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855054478403350528",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855092739402289152",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855239954393444353",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855395168392011776",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855661374554259460",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855850189449379840",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855904163133128704",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856044038192996352",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856079993360797696",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856224644856262656",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856369615852756994",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856492941795237888",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857014131265859584",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857496108133748736",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857622032481230849",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857635081594294272",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857695137979408391",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857722310677155840",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858061570051538944",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858254593481990145",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858276032490741760",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858387219429699584",
+      "model": "logistic_regression",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804134698729385984",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804358147477569536",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804396149176156160",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804812045480771584",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804966130456657920",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805011265559072769",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805569133609938944",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "805736075645878272",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806524889062658048",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806844434797264896",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "806911218946478080",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807027243444793344",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807732117253791745",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808290308429475842",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808317243780173824",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808377379965976576",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809405262889095168",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809408116777488384",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809524728327184386",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "810628800614694912",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810735182668070912",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810758900001767424",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810922667482185728",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "810983054714007552",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811024655939149824",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811231443888275456",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811298905719787520",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "811299516553003009",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "811599992947351552",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811633486037680129",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811972338266861568",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812279597400199168",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812508103052840961",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812621343896326145",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812836232157859842",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813119629920968705",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813127182226624512",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813219319232479232",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813265588021850112",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813424179089379328",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813939777791787009",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814177667318763520",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814650104217006085",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814864711577636864",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814915453831225344",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "814935629352026116",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815131952948781056",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815159009477087236",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815195356308893696",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "815333545220734976",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815928915072053248",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816056505183141888",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816124679811399681",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816284274169090048",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816318283561443329",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816346081726529537",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816388686979928064",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817196321534865409",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817521543383289857",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817745007419465728",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817747639177478144",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818446558152851457",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818651042011344898",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818653806376292352",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818788045747060737",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818789681437536258",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818825368341716992",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818945907437801473",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819004135643160580",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819244415256563713",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819423666756718593",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "819978313326268416",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820192310541619200",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820292451709685760",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820655705971687424",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821068406082437120",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821341555583778818",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821841322076241921",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821873838405406721",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822037071518957568",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822193532484001792",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822205856158781440",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822277516857606144",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822360517196926977",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822482257449545729",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822892881086214144",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "823125581797670912",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "823883524956680192",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "823956808310161408",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824512617914007552",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824716979416207360",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "824803892567429122",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825313726744059905",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825727706838990848",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825847865293602816",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "826104376175493120",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "826207390878019584",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "826569641573113856",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "826859879377825792",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827018774326939648",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827165957101670400",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827202928117178368",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827203933328330754",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827234224461713409",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827373064572772352",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827385340805603330",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827554749998260228",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827566750539591683",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828142869701615616",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828429768357982210",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828780509622837249",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828878101010587648",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "828991975156219904",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829086385458012161",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829166951616245761",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829208141829197824",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "829224690203951108",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829395541805191171",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829615888076828672",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830003378994425856",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830056372465238017",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830063794051227649",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830084013075357696",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830312927399907328",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830408783318880257",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830428493888512001",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830476752342376448",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830592479300812800",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830650211320098816",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830975030200823808",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831116349325922308",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831119710615924736",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831192939116232704",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831483793999532032",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832335039350394880",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832375219838865408",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832923238015582208",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833045943767461888",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833494519198908416",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833535559607975938",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834072555745058816",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834435405256806401",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834566172074995713",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834567019718656000",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834818342993141760",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "835180735086620672",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "835242231640502278",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "835860343255629826",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "835927678054191105",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836285112429887488",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836352649675014145",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837037233429442565",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837890623080386560",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838056579954065408",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838382102198497281",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838598935367274497",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838892256547508224",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839124962355134466",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839155571437813760",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839479545371766787",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839510441143463937",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839550191132778496",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839810114278330368",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "840137676460240897",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840252205265485824",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841313904844242944",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841680309406056448",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842761793852375040",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842775818967404544",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842860474974834688",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843010334021439488",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843050348449271808",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843507361704742912",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843518794928738304",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843659079373520896",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843741472499404800",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "844557263956258816",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "844664923015860224",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "844696047129628674",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "845049966313680896",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845299170281959424",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845752845123117058",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846310292732678144",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846444606518673409",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846496451467317249",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846549970249551873",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846765335726477313",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846806366018768897",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846962645072859137",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847146906245644288",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847408989289684992",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847456924891176963",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847486246586679304",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847518771694702592",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847796372082352129",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848191272095494144",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848396093171937280",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848610335204532226",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848991034885492739",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849186794231017472",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "849585410632282112",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "849665273481363457",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849714881368653826",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "849749019555442689",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849872050663698432",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850370124200763392",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850400281963757569",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850498449816637440",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850725197305065472",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850733362297933825",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850747064505978880",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850794137523810304",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850916127660269568",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850958962522566656",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851049564408827906",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "851372958467706880",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851481151629819909",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851569236745089025",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851802030507216900",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852046127742410752",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852191404839374848",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852354543283306496",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852435548585185281",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852903077992595458",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852925534325661697",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852972227863523328",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852987877977882628",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853056785166589952",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853289924782673920",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853548532032315394",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853705068138426368",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853734443072311298",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854046823199236097",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854059810907709442",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854095014577790976",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854186510064734209",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854350281668272128",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854393400619139074",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855130240498184194",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855583440158248960",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855661374554259460",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855850189449379840",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856197123565551616",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856470400460443648",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856482956424171520",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856492941795237888",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856916893432770560",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857068231936364544",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857269078045728768",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857635081594294272",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857676005569433600",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857693610724208641",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857695137979408391",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857722310677155840",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857786235632353289",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857855894192869376",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857881544526098433",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857961539797737472",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858254593481990145",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858347176740745217",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858387219429699584",
+      "model": "logistic_regression",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804119512010424320",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804743436024893440",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804812045480771584",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804966130456657920",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805569133609938944",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805736075645878272",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805811153834229760",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806263201398669313",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806911218946478080",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807478959428358144",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807614619908980737",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808098549925871616",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808290308429475842",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "809030692344569860",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809405262889095168",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809426558658183172",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "809524728327184386",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809732831668826112",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "809852171835609088",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811024655939149824",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811091321276530688",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811298905719787520",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811299516553003009",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812529223533522944",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812621343896326145",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812898185828044800",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813066898283917313",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813110469888184320",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813147003706281988",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "814177667318763520",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814438320360943616",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814650104217006085",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814832362911571969",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "814935629352026116",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815131952948781056",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815928915072053248",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816124679811399681",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816284274169090048",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816388686979928064",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816681061782605825",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817106413478617088",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817175893995061248",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818356787007078400",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818446558152851457",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818651042011344898",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818653806376292352",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818788045747060737",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818825368341716992",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819978313326268416",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820280114684563456",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820655705971687424",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820752427372740609",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821050912693223428",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821068406082437120",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821341555583778818",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821592090702385153",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822360517196926977",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822482257449545729",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822509157215596549",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822511039292076033",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824337691693240320",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "825061089914269696",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "825313726744059905",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825882473766776834",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "826190034764177408",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827202928117178368",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827245213601165312",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827260423573368832",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827373064572772352",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827385340805603330",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "828142869701615616",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828878101010587648",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "829166951616245761",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829385503212445697",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830003378994425856",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830084013075357696",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830428493888512001",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830476752342376448",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831119710615924736",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831483793999532032",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832375219838865408",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834545862521024513",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834567019718656000",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836258856053374977",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837860150513917952",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837890623080386560",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838541765346918400",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838575110030254082",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838729134276820993",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838797880639033345",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839014265214349312",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839479545371766787",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839550191132778496",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840137676460240897",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840138567070371841",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "840217846894481409",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "841313904844242944",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "841469068494458880",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842173357164490752",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842386993032114177",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842666332822953984",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842700315057176576",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842775818967404544",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842879221215051777",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843507361704742912",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843792353609490433",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "844696047129628674",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "845120547751018498",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846310292732678144",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846398304531435521",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846700212915720192",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846765335726477313",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846806366018768897",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846962645072859137",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847294167738793984",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847486246586679304",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847518771694702592",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848609804071444481",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "848610335204532226",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848991034885492739",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849665273481363457",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849749019555442689",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850017478730297345",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850370124200763392",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850794137523810304",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850845980677349376",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851372958467706880",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851481151629819909",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851569236745089025",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851802030507216900",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "851835988213149699",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852039081047412736",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852057713668493312",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852903077992595458",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852972227863523328",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853236467585384448",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "854305973355372545",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854583118161903616",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855054478403350528",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855092739402289152",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855130240498184194",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855850189449379840",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856197123565551616",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856470400460443648",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856482956424171520",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857635081594294272",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857693610724208641",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857695137979408391",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857722310677155840",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857881544526098433",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858061570051538944",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858102163586908160",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858250782625411072",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858254593481990145",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858335642648023041",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858387219429699584",
+      "model": "linear_svm",
+      "contrast": "B-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804134698729385984",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804358147477569536",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804396149176156160",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "804743436024893440",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "804966130456657920",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805011265559072769",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "805736075645878272",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806524889062658048",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "806844434797264896",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "806911218946478080",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807614619908980737",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "807634993975533568",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "807732117253791745",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808098549925871616",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808290308429475842",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "808317243780173824",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "809030692344569860",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809170114746712068",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "809405262889095168",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809408116777488384",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809524728327184386",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "809732831668826112",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810583724815511554",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810628800614694912",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810758900001767424",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "810922667482185728",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "810983054714007552",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811024655939149824",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811231443888275456",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811299516553003009",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "811599992947351552",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811633486037680129",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "811912029783068672",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812122563333722112",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "812279597400199168",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812508103052840961",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812529223533522944",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812621343896326145",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "812836232157859842",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813066898283917313",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813119629920968705",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813127182226624512",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813147003706281988",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813219319232479232",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "813424179089379328",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "813939777791787009",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814177667318763520",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814438320360943616",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814650104217006085",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814864711577636864",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "814935629352026116",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815131952948781056",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815159009477087236",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815195356308893696",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "815333545220734976",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815370023455879168",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815609238013743105",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "815928915072053248",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816056505183141888",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816124679811399681",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "816318283561443329",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "816471416275083265",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817196321534865409",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817512712150257664",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "817521543383289857",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "817747639177478144",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818446558152851457",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818651042011344898",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818653806376292352",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818788045747060737",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "818789681437536258",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818825368341716992",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "818945907437801473",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819004135643160580",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "819423666756718593",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "819978313326268416",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820173928127721473",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "820192310541619200",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820655705971687424",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "820752427372740609",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821068406082437120",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "821341555583778818",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "821841322076241921",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822037071518957568",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822193532484001792",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822205856158781440",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "822277516857606144",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822360517196926977",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822482257449545729",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822511039292076033",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "822892881086214144",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "823125581797670912",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "823606228676907009",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "823883524956680192",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "823956808310161408",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824512617914007552",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "824716979416207360",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "824803892567429122",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825313726744059905",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "825727706838990848",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "826207390878019584",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "826569641573113856",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "826859879377825792",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827202928117178368",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827234224461713409",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827260423573368832",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827373064572772352",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827385340805603330",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "827554749998260228",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827566750539591683",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "827611136828768257",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828142869701615616",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828429768357982210",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828780509622837249",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "828878101010587648",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "828991975156219904",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829086385458012161",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829166951616245761",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829208141829197824",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "829395541805191171",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "829615888076828672",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830003378994425856",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830056372465238017",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830084013075357696",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830408783318880257",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "830428493888512001",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830476752342376448",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "830592479300812800",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831116349325922308",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831184691923398657",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831192939116232704",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831483793999532032",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "831523610061918208",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "831582931848138753",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "832335039350394880",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832375219838865408",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "832923238015582208",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833494519198908416",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "833535559607975938",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834072555745058816",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834435405256806401",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834545862521024513",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834566172074995713",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "834567019718656000",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "834794954396463104",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "835180735086620672",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "835242231640502278",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "836352649675014145",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "836572016446750720",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "837037233429442565",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "837890623080386560",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838056579954065408",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838382102198497281",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838541765346918400",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838575110030254082",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838598935367274497",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "838729134276820993",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "838892256547508224",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839124962355134466",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839155571437813760",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839479545371766787",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839510441143463937",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "839550191132778496",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "839810114278330368",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "840137676460240897",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "841680309406056448",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842700315057176576",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "842761793852375040",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842860474974834688",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "842879221215051777",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843010334021439488",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843507361704742912",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843518794928738304",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843659079373520896",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "843741472499404800",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "844557263956258816",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "844587228659617792",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "844664923015860224",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "844696047129628674",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "845023600843378688",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845049966313680896",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845299170281959424",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "845752845123117058",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846310292732678144",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846444606518673409",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846496451467317249",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846549970249551873",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846700212915720192",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846765335726477313",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "846806366018768897",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "846962645072859137",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847146906245644288",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847294167738793984",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847408989289684992",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847486246586679304",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "847518771694702592",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "847796372082352129",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848610335204532226",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "848991034885492739",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849665273481363457",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "849714881368653826",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "849749019555442689",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850017478730297345",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850370124200763392",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850400281963757569",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850498449816637440",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850566380525162497",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850725197305065472",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850733362297933825",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "850747064505978880",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850794137523810304",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850845980677349376",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "850916127660269568",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851372958467706880",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851481151629819909",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851569236745089025",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "851802030507216900",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852039081047412736",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852191404839374848",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852354543283306496",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852435548585185281",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852903077992595458",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852925534325661697",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "852972227863523328",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "852987877977882628",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853289924782673920",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "853705068138426368",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "853734443072311298",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854059810907709442",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854095014577790976",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854186510064734209",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "854305973355372545",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855054478403350528",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855130240498184194",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "855661374554259460",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "855850189449379840",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856197123565551616",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856369615852756994",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856470400460443648",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856482956424171520",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856492941795237888",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "856742918471786496",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "856916893432770560",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857068231936364544",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857269078045728768",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857635081594294272",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857676005569433600",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857693610724208641",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857695137979408391",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857722310677155840",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857786235632353289",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857855894192869376",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "857881544526098433",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "857961539797737472",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858061570051538944",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858254593481990145",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858276032490741760",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "corrected"
+    },
+    {
+      "id": "858347176740745217",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    },
+    {
+      "id": "858387219429699584",
+      "model": "linear_svm",
+      "contrast": "C-A",
+      "outcome": "introduced"
+    }
+  ]
+}

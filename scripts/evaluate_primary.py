@@ -162,8 +162,8 @@ def run(processed_dir, output_path):
 
 if __name__ == "__main__":
     processed = ROOT / "data" / "processed"
-    output = processed / "primary_evaluation.json"
+    output = ROOT / "output" / "primary_evaluation.json"
     if output.exists():
         raise SystemExit(f"Evaluation already exists: {output}")
     run(processed, output)
-    print(output)
+    print("Evaluation saved.")
