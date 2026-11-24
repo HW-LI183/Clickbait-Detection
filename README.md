@@ -5,6 +5,8 @@ teaser + headline, and teaser + headline + body on the frozen test split.
 The [matched wrong-body experiment](docs/results/matched_body_validation.md)
 uses the validation split to compare the original body with a different article
 of similar topic and length from the same archived news host.
+Three [validation analyses](docs/results/validation_sensitivities.md) examine
+how many body words help, what lexical overlap adds, and where annotators disagree.
 
 The proposal uses the publicly labeled `clickbait17-train-170630.zip` from
 Webis-Clickbait-17, Zenodo record 5530410. It does not require the much larger
@@ -41,6 +43,7 @@ interpreted from the repository root unless they name a sibling protocol.
 | [Engineered-feature protocol](docs/protocols/engineered_features_protocol.md) | Definitions and train-only fitting for interpretable writing/relationship features. |
 | [TF-IDF pre-experiment results](docs/results/tfidf_preexperiment_results.md) | Selected settings, pilot scores, and integrity checks. |
 | [Frozen primary error analysis](docs/results/primary_error_analysis.md) | Test errors, prediction changes, representative cases, and annotator-disagreement results. |
+| [Validation sensitivity analyses](docs/results/validation_sensitivities.md) | Body length, teaser–body lexical features, and annotator agreement for both classifiers, with reproduction instructions. |
 
 Machine-readable audits and detailed scores are under
 `data/processed/`, `data/processed/optional/`,
@@ -148,7 +151,7 @@ not fit a classifier. The main A/B/C TF-IDF vectorizers and frozen
 comparison remain unchanged; any future feature scaling must be fitted
 on training rows only, in a separately stated ablation.
 
-## Data for later ablations
+## Data for exploratory ablations
 
 Join sidecars by `id`, never by row position. Keep the same retained IDs
 and the group-preserving assignments in `data/processed/split_manifest.jsonl`
@@ -162,14 +165,14 @@ for every comparable run. The following inputs are already available:
 | `data/processed/engineered/relation_vectorizer.joblib` | Shared-space TF-IDF encoder fitted on training text only | Reproduce the two cross-field cosine columns; **not** a replacement for the main field-specific encoders. |
 | `data/processed/optional/optional_features.jsonl` | Cleaned captions, keywords, and description, with empty strings for missing values | Exploratory metadata ablations only; consult the optional audit and duplicate groups first. |
 
-Recommended experiments, after completing and freezing the six primary
-word-TF-IDF A/B/C comparisons:
+Completed validation comparisons and remaining experiments:
 
 1. **Writing cues:** Compare C against C plus the seven `post_*_count`
    features from the engineered sidecar. A writing-cues-only teaser model
    can be a descriptive reference, but not a replacement for A.
-2. **Text alignment:** Compare C against C plus the four `post_body_*`
-   relation features; separately compare B against B plus the four
+2. **Text alignment:** The [validation results](docs/results/validation_sensitivities.md)
+   compare C against C plus the four `post_body_*` relation features.
+   A follow-up could separately compare B against B plus the four
    `post_title_*` features. Then try C plus both sets, and finally C plus
    all 15 sidecar columns. This isolates body alignment, title alignment,
    and writing cues rather than attributing a combined gain to one source.
@@ -182,11 +185,10 @@ word-TF-IDF A/B/C comparisons:
    training-only group folds (or validation), fit vocabulary/IDF on train,
    and compare against each condition's unchanged word baseline. A
    `char_wb` variant is a *separate* experiment, not an implicit swap.
-4. **Body length:** Rebuild C with the first 200, 500, and 1,500 words
-   from `body_full`, against the frozen 1,000-word C reference. Fit each
-   new body vocabulary on train only. Do not reuse the `body_1000`
-   relation columns for another cap; recompute body relations if needed.
-   A within-split shuffled-body control is optional and exploratory.
+4. **Body length:** The [validation results](docs/results/validation_sensitivities.md)
+   compare 200, 500, 1,000, and 1,500 words from `body_full`. Each body
+   vocabulary was fitted on training rows. The separate [wrong-body
+   control](docs/results/matched_body_validation.md) swaps bodies between matched posts.
 5. **Optional metadata:** Append captions, keywords, and description
    one field at a time to C, with explicit missingness indicators. These
    are not part of the main comparison. The optional audit reports

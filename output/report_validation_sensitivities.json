@@ -1,0 +1,276 @@
+{
+  "split": "validation",
+  "n": 2894,
+  "inputs_sha256": {
+    "records.jsonl": "32565c7f5fbb19c8fe6b43e6aa93bb0087eb95f1cb02db5fada8bbf5b68ed8e8",
+    "split_manifest.jsonl": "bc2beac9643deaed65a9a775f6ab4734fc5136ad7162df7f549c4f7debe212cd"
+  },
+  "sklearn": "1.9.1",
+  "caps": {
+    "200": {
+      "logistic_regression": {
+        "macro_f1": 0.740348947680673,
+        "clickbait_precision": 0.6684587813620072,
+        "clickbait_recall": 0.5336194563662375,
+        "clickbait_f1": 0.5934765314240255,
+        "average_precision": 0.6500713713912357,
+        "confusion_matrix": [
+          [
+            2010,
+            185
+          ],
+          [
+            326,
+            373
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.7490320207206846,
+        "clickbait_precision": 0.6500802568218299,
+        "clickbait_recall": 0.5793991416309013,
+        "clickbait_f1": 0.6127080181543116,
+        "average_precision": 0.6527802981566945,
+        "confusion_matrix": [
+          [
+            1977,
+            218
+          ],
+          [
+            294,
+            405
+          ]
+        ]
+      }
+    },
+    "500": {
+      "logistic_regression": {
+        "macro_f1": 0.7547939387903033,
+        "clickbait_precision": 0.6786324786324787,
+        "clickbait_recall": 0.5679542203147353,
+        "clickbait_f1": 0.618380062305296,
+        "average_precision": 0.6863693772175501,
+        "confusion_matrix": [
+          [
+            2007,
+            188
+          ],
+          [
+            302,
+            397
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.7656042406488752,
+        "clickbait_precision": 0.6682242990654206,
+        "clickbait_recall": 0.6137339055793991,
+        "clickbait_f1": 0.639821029082774,
+        "average_precision": 0.6900813381417586,
+        "confusion_matrix": [
+          [
+            1982,
+            213
+          ],
+          [
+            270,
+            429
+          ]
+        ]
+      }
+    },
+    "1000": {
+      "logistic_regression": {
+        "macro_f1": 0.7689699625413768,
+        "clickbait_precision": 0.6956521739130435,
+        "clickbait_recall": 0.5951359084406295,
+        "clickbait_f1": 0.6414803392444102,
+        "average_precision": 0.6946358605487629,
+        "confusion_matrix": [
+          [
+            2013,
+            182
+          ],
+          [
+            283,
+            416
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.7723445404663033,
+        "clickbait_precision": 0.6717325227963525,
+        "clickbait_recall": 0.6323319027181689,
+        "clickbait_f1": 0.6514369933677229,
+        "average_precision": 0.6975729816593608,
+        "confusion_matrix": [
+          [
+            1979,
+            216
+          ],
+          [
+            257,
+            442
+          ]
+        ]
+      }
+    },
+    "1500": {
+      "logistic_regression": {
+        "macro_f1": 0.7688530097353626,
+        "clickbait_precision": 0.6938435940099834,
+        "clickbait_recall": 0.5965665236051502,
+        "clickbait_f1": 0.6415384615384615,
+        "average_precision": 0.6970581360899634,
+        "confusion_matrix": [
+          [
+            2011,
+            184
+          ],
+          [
+            282,
+            417
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.7736726994877694,
+        "clickbait_precision": 0.6742770167427702,
+        "clickbait_recall": 0.6337625178826896,
+        "clickbait_f1": 0.6533923303834809,
+        "average_precision": 0.6996066271428546,
+        "confusion_matrix": [
+          [
+            1981,
+            214
+          ],
+          [
+            256,
+            443
+          ]
+        ]
+      }
+    }
+  },
+  "relations": [
+    "post_body_tfidf_cosine",
+    "post_body_overlap_recall",
+    "post_body_jaccard",
+    "post_body_length_ratio"
+  ],
+  "relation_block_scale": 0.5,
+  "augmented": {
+    "logistic_regression": {
+      "macro_f1": 0.7723983206300673,
+      "clickbait_precision": 0.6791277258566978,
+      "clickbait_recall": 0.6237482117310443,
+      "clickbait_f1": 0.6502609992542878,
+      "average_precision": 0.6861932272246165,
+      "confusion_matrix": [
+        [
+          1989,
+          206
+        ],
+        [
+          263,
+          436
+        ]
+      ]
+    },
+    "linear_svm": {
+      "macro_f1": 0.783664437590174,
+      "clickbait_precision": 0.6714285714285714,
+      "clickbait_recall": 0.6723891273247496,
+      "clickbait_f1": 0.6719085060757684,
+      "average_precision": 0.6928019370910059,
+      "confusion_matrix": [
+        [
+          1965,
+          230
+        ],
+        [
+          229,
+          470
+        ]
+      ]
+    }
+  },
+  "annotation_subgroups": {
+    "split_3_to_2": {
+      "n": 801,
+      "clickbait": 329,
+      "logistic_regression": {
+        "macro_f1": 0.6274798017516464,
+        "clickbait_precision": 0.6131687242798354,
+        "clickbait_recall": 0.45288753799392095,
+        "clickbait_f1": 0.5209790209790209,
+        "average_precision": 0.5895119861363873,
+        "confusion_matrix": [
+          [
+            378,
+            94
+          ],
+          [
+            180,
+            149
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.6382960931228259,
+        "clickbait_precision": 0.6121673003802282,
+        "clickbait_recall": 0.48936170212765956,
+        "clickbait_f1": 0.543918918918919,
+        "average_precision": 0.5913390126887934,
+        "confusion_matrix": [
+          [
+            370,
+            102
+          ],
+          [
+            168,
+            161
+          ]
+        ]
+      }
+    },
+    "agreement_4_or_5": {
+      "n": 2093,
+      "clickbait": 370,
+      "logistic_regression": {
+        "macro_f1": 0.8406826809074515,
+        "clickbait_precision": 0.752112676056338,
+        "clickbait_recall": 0.7216216216216216,
+        "clickbait_f1": 0.736551724137931,
+        "average_precision": 0.7967301704604633,
+        "confusion_matrix": [
+          [
+            1635,
+            88
+          ],
+          [
+            103,
+            267
+          ]
+        ]
+      },
+      "linear_svm": {
+        "macro_f1": 0.8376505742119512,
+        "clickbait_precision": 0.7113924050632912,
+        "clickbait_recall": 0.7594594594594595,
+        "clickbait_f1": 0.734640522875817,
+        "average_precision": 0.7998202872999199,
+        "confusion_matrix": [
+          [
+            1609,
+            114
+          ],
+          [
+            89,
+            281
+          ]
+        ]
+      }
+    }
+  }
+}
