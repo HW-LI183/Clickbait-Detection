@@ -1,0 +1,180 @@
+{
+  "artifacts": {
+    "error_analysis_summary.json": {
+      "bytes": 3250,
+      "sha256": "bf25f8d7a9b30c9a376ca1b187b0f930a28b12c433fd9b4ef46dbe701e828143"
+    },
+    "error_case_candidates.jsonl": {
+      "bytes": 49407,
+      "sha256": "4139a32a016982de695bec2e7b5223d31bb424862bfa431c8ef54e17f07cae94"
+    },
+    "frozen_models.joblib": {
+      "bytes": 903445,
+      "sha256": "d6c0c7688ade01bfe4125d82ed43416b2a8539f5d3cd5c181041a71f1e84175d"
+    },
+    "reproduced_metrics.json": {
+      "bytes": 2647,
+      "sha256": "1235400af8d2c1f2af6780cf5782c2a576cc95c0c4b64e25f5a59977fafcdf65"
+    },
+    "test_predictions.jsonl": {
+      "bytes": 4268781,
+      "sha256": "b463e62ea5da0845d4b044d63c08f6287a10cc2f0cfe4a2d0c90fb0f2516ea69"
+    }
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "joblib": "1.5.2",
+    "numpy": "2.3.4",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.16.3"
+  },
+  "frozen_at_utc": "2026-11-24T08:24:03.935485+00:00",
+  "models": {
+    "A/linear_svm": {
+      "C": 0.1,
+      "test_macro_f1": 0.7461891606539903,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7463690261415314
+    },
+    "A/logistic_regression": {
+      "C": 1.0,
+      "test_macro_f1": 0.740915857301979,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7404602049077357
+    },
+    "B/linear_svm": {
+      "C": 0.1,
+      "test_macro_f1": 0.7393762331417832,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7389503811616613
+    },
+    "B/logistic_regression": {
+      "C": 10.0,
+      "test_macro_f1": 0.726975473676793,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7336581962272637
+    },
+    "C/linear_svm": {
+      "C": 0.1,
+      "test_macro_f1": 0.772674406524468,
+      "threshold": -0.25,
+      "validation_macro_f1": 0.7723445404663033
+    },
+    "C/logistic_regression": {
+      "C": 1.0,
+      "test_macro_f1": 0.767617290532993,
+      "threshold": -0.5,
+      "validation_macro_f1": 0.7689699625413768
+    }
+  },
+  "policy": {
+    "allowed": [
+      "exact reproducibility checks",
+      "descriptive error analysis",
+      "predeclared sensitivity analyses labelled as secondary"
+    ],
+    "primary_result_may_not_be_reselected_from_test": true,
+    "prohibited": [
+      "retuning from test performance",
+      "replacing the primary result with a post-test best model",
+      "changing the frozen split or sample exclusions"
+    ]
+  },
+  "primary_result_commit": "9200f194464e990c1a376a29e3f096a239c5c75e",
+  "reproduction": {
+    "average_precision_tolerance": 1e-05,
+    "classification_metrics_and_confusion_matrices_match": true,
+    "metric_drift_reproduced_minus_published": {
+      "A/linear_svm": {
+        "average_precision": 0.0,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      },
+      "A/logistic_regression": {
+        "average_precision": 0.0,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      },
+      "B/linear_svm": {
+        "average_precision": 0.0,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      },
+      "B/logistic_regression": {
+        "average_precision": 4.3517940689907775e-06,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      },
+      "C/linear_svm": {
+        "average_precision": 0.0,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      },
+      "C/logistic_regression": {
+        "average_precision": 0.0,
+        "clickbait_f1": 0.0,
+        "clickbait_precision": 0.0,
+        "clickbait_recall": 0.0,
+        "macro_f1": 0.0,
+        "validation_macro_f1": 0.0
+      }
+    },
+    "note": "Continuous decision scores can differ by floating-point roundoff across binary runtimes; the largest allowed aggregate AP drift is 1e-5. Class decisions, validation Macro-F1, test classification metrics, confusion matrices, and the published changed-decision list must match.",
+    "published_changed_decision_list_matches": true
+  },
+  "settings": {
+    "limits": [
+      5000,
+      5000,
+      15000
+    ],
+    "ngram": [
+      1,
+      2
+    ],
+    "weights": [
+      1,
+      1,
+      1
+    ]
+  },
+  "source": {
+    "freeze_script_sha256": "b3cd77bac46c28257f890e1e04b7c50b70823a655179e28179089bea87216f6b",
+    "primary_evaluation": "output/primary_evaluation.json",
+    "primary_evaluation_sha256": "7739733d374903c0d6593f036bbac0710459943861f81b8a3b42213b10cc39bd",
+    "processed_inputs_sha256": {
+      "records.jsonl": "32565c7f5fbb19c8fe6b43e6aa93bb0087eb95f1cb02db5fada8bbf5b68ed8e8",
+      "split_manifest.jsonl": "bc2beac9643deaed65a9a775f6ab4734fc5136ad7162df7f549c4f7debe212cd"
+    }
+  },
+  "split_sizes": [
+    13506,
+    2894,
+    2894
+  ],
+  "status": "frozen",
+  "test_group_count": 2780,
+  "vocabulary_dimensions": {
+    "body_1000": 15000,
+    "post_text": 5000,
+    "title": 5000
+  }
+}
