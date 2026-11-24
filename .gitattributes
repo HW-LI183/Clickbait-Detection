@@ -3,3 +3,6 @@
 .gitignore text eol=lf
 .gitattributes text eol=lf
 *.pdf binary
+output/validation_article_sources.csv text eol=lf
+output/matched_body*.csv text eol=lf
+output/matched_body*.json text eol=lf

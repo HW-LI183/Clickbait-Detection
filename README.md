@@ -1,5 +1,11 @@
 # Webis-Clickbait-17 data
 
+The [primary A/B/C evaluation](output/primary_evaluation.json) compares teaser,
+teaser + headline, and teaser + headline + body on the frozen test split.
+The [matched wrong-body experiment](docs/results/matched_body_validation.md)
+uses the validation split to compare the original body with a different article
+of similar topic and length from the same archived news host.
+
 The proposal uses the publicly labeled `clickbait17-train-170630.zip` from
 Webis-Clickbait-17, Zenodo record 5530410. It does not require the much larger
 web-page archive files in the same record.
