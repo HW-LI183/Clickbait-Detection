@@ -1,9 +1,16 @@
 """Regression checks for leakage, body matching and paired resampling."""
+import json
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 
-from evaluate_matched_bodies import bootstrap_gap, match_articles
+from evaluate_matched_bodies import (
+    bootstrap_gap, match_articles, output_paths, run, save_results,
+    sha256, verify_reference_score,
+)
 
 
 class WrongBodyTests(unittest.TestCase):
@@ -38,6 +45,69 @@ class WrongBodyTests(unittest.TestCase):
         truth = np.array([True, False] * 4)
         self.assertEqual(bootstrap_gap(truth, truth, ~truth), [1, 1])
         self.assertEqual(bootstrap_gap(truth, truth, truth), [0, 0])
+
+    def test_reference_score_requires_absolute_agreement(self):
+        verify_reference_score("B/logistic_regression", 0.75, 0.75)
+        verify_reference_score("C/linear_svm", 0.75 + 5e-13, 0.75)
+        for value in (0.750001, float("nan"), float("inf")):
+            with self.subTest(value=value), self.assertRaisesRegex(
+                ValueError, "C/linear_svm.*differs"
+            ):
+                verify_reference_score("C/linear_svm", value, 0.75)
+
+    def test_existing_either_output_stops_before_loading_data(self):
+        for topic_only in (False, True):
+            prefix = "matched_body_topic_only" if topic_only else "matched_body"
+            for index in (0, 1):
+                with self.subTest(topic_only=topic_only, index=index):
+                    with tempfile.TemporaryDirectory() as temporary:
+                        directory = Path(temporary)
+                        existing = output_paths(directory, prefix)[index]
+                        existing.write_bytes(b"published")
+                        with patch("evaluate_matched_bodies.load_training") as load:
+                            with self.assertRaises(FileExistsError):
+                                run(topic_only, directory)
+                            load.assert_not_called()
+                        self.assertEqual(existing.read_bytes(), b"published")
+                        self.assertEqual(list(directory.iterdir()), [existing])
+
+    def test_save_results_records_hash_and_refuses_overwrite(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary) / "new"
+            save_results(directory, "matched_body", [{"id": "example"}], {"models": {}})
+            pairs, result = output_paths(directory, "matched_body")
+            self.assertEqual(json.loads(result.read_text())["pairs_sha256"], sha256(pairs))
+            before = {path: path.read_bytes() for path in (pairs, result)}
+            with self.assertRaises(FileExistsError):
+                save_results(directory, "matched_body", [{"id": "changed"}], {})
+            self.assertEqual(before, {path: path.read_bytes() for path in (pairs, result)})
+            self.assertEqual(set(directory.iterdir()), {pairs, result})
+
+    def test_serialization_failure_leaves_no_output_files(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            with self.assertRaises(TypeError):
+                save_results(directory, "matched_body", [{"id": "example"}],
+                             {"not_json": object()})
+            self.assertEqual(list(directory.iterdir()), [])
+
+    def test_publication_conflict_preserves_other_writer_and_cleans_partial_output(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            pairs, result = output_paths(directory, "matched_body")
+            original_open = Path.open
+
+            def conflicting_open(path, mode="r", *args, **kwargs):
+                if path == result and mode == "xb":
+                    path.write_bytes(b"other writer")
+                return original_open(path, mode, *args, **kwargs)
+
+            with patch.object(Path, "open", conflicting_open):
+                with self.assertRaises(FileExistsError):
+                    save_results(directory, "matched_body", [{"id": "example"}], {})
+            self.assertFalse(pairs.exists())
+            self.assertEqual(result.read_bytes(), b"other writer")
+            self.assertEqual(list(directory.iterdir()), [result])
 
 
 if __name__ == "__main__":

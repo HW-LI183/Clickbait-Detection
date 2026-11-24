@@ -3,15 +3,19 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import platform
+import shutil
+import tempfile
 from collections import Counter, defaultdict
+from pathlib import Path
 
 import numpy as np
 import scipy
 import sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from evaluate_primary import metrics
+from evaluate_primary import macro_f1, metrics
 from tfidf_preexperiment import (
     CONDITIONS, FIELDS, MODELS, ROOT, SEED, combine_blocks, load_training,
     pilot_model, read_jsonl, sha256, vectorize_fold,
@@ -19,6 +23,57 @@ from tfidf_preexperiment import (
 
 OUTPUT = ROOT / "output"
 SOURCES = OUTPUT / "validation_article_sources.csv"
+REFERENCE_TOLERANCE = 1e-12
+
+
+def output_paths(output_dir, prefix):
+    return (output_dir / f"{prefix}_pairs.csv",
+            output_dir / f"{prefix}_validation.json")
+
+
+def check_outputs_available(output_dir, prefix):
+    for path in output_paths(output_dir, prefix):
+        if path.exists():
+            raise FileExistsError(
+                f"Output already exists: {path}. Use --output-dir with a fresh location."
+            )
+
+
+def verify_reference_score(model_key, actual, expected):
+    if not math.isclose(actual, expected, rel_tol=0.0, abs_tol=REFERENCE_TOLERANCE):
+        raise ValueError(
+            f"{model_key} validation Macro-F1 differs from primary evaluation: "
+            f"reproduced={actual!r}, expected={expected!r}, "
+            f"absolute tolerance={REFERENCE_TOLERANCE}"
+        )
+
+
+def save_results(output_dir, prefix, audit, result):
+    check_outputs_available(output_dir, prefix)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    destinations = output_paths(output_dir, prefix)
+    with tempfile.TemporaryDirectory(prefix=".matched-body-", dir=output_dir) as temporary:
+        staged = [Path(temporary) / path.name for path in destinations]
+        with staged[0].open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=audit[0], lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(audit)
+        result["pairs_sha256"] = sha256(staged[0])
+        with staged[1].open("w", encoding="utf-8", newline="\n") as stream:
+            json.dump(result, stream, indent=2, ensure_ascii=False)
+            stream.write("\n")
+        # Exclusive creation also protects files created after the initial check.
+        created = []
+        try:
+            for source, destination in zip(staged, destinations):
+                with destination.open("xb") as target:
+                    created.append(destination)
+                    with source.open("rb") as stream:
+                        shutil.copyfileobj(stream, target)
+        except BaseException:
+            for path in reversed(created):
+                path.unlink()
+            raise
 
 
 def topic_text(row):
@@ -91,7 +146,10 @@ def distribution(values):
                     np.quantile(values, [0, .25, .5, .75, 1]).tolist()))
 
 
-def run(topic_only=False):
+def run(topic_only=False, output_dir=OUTPUT):
+    output_dir = Path(output_dir)
+    prefix = "matched_body_topic_only" if topic_only else "matched_body"
+    check_outputs_available(output_dir, prefix)
     processed = ROOT / "data/processed"
     train_ids, texts, train_labels, _, hashes = load_training(processed)
     primary = json.loads((OUTPUT / "primary_evaluation.json").read_text(encoding="utf-8"))
@@ -155,14 +213,20 @@ def run(topic_only=False):
     _, wrong_x = combine_blocks(wrong_blocks, FIELDS, weights)
     for name in MODELS:
         selected = {condition: primary["models"][f"{condition}/{name}"] for condition in ("B", "C")}
-        scores = {}
+        scores, reference_scores = {}, {}
         for condition, (xt, xv) in correct_inputs.items():
             config = selected[condition]
             model = pilot_model(name).set_params(C=config["C"]).fit(xt, train_labels == "clickbait")
             scores[condition] = model.decision_function(xv)
+            reference_scores[condition] = macro_f1(
+                valid_y, scores[condition] >= config["threshold"]
+            )
+            verify_reference_score(
+                f"{condition}/{name}", reference_scores[condition],
+                config["validation_macro_f1"],
+            )
             if condition == "C":
                 scores["swapped"] = model.decision_function(wrong_x)
-        c_cutoff = selected["C"]["threshold"]
         predictions = {key: (value if key == "swapped" else value[recipients])
                        >= selected["B" if key == "B" else "C"]["threshold"]
                        for key, value in scores.items()}
@@ -180,8 +244,8 @@ def run(topic_only=False):
             }
         result["models"][name] = {
             "selected": {key: {"C": val["C"], "threshold": val["threshold"]} for key, val in selected.items()},
-            "full_validation_correct_macro_f1": metrics(valid_y, scores["C"] >= c_cutoff, scores["C"])["macro_f1"],
-            "full_validation_B_macro_f1": metrics(valid_y, scores["B"] >= selected["B"]["threshold"], scores["B"])["macro_f1"],
+            "full_validation_correct_macro_f1": reference_scores["C"],
+            "full_validation_B_macro_f1": reference_scores["B"],
             "original_validation_macro_f1": {key: val["validation_macro_f1"] for key, val in selected.items()},
             "matched_B": subset["B"], "matched_correct_C": subset["C"], "matched_swapped_C": subset["swapped"],
             "correct_minus_swapped": subset["C"]["macro_f1"] - subset["swapped"]["macro_f1"],
@@ -193,15 +257,7 @@ def run(topic_only=False):
         for i, row in enumerate(audit):
             for key in ("B", "C", "swapped"):
                 row[f"{name}_{key}"] = int(predictions[key][i])
-    prefix = "matched_body_topic_only" if topic_only else "matched_body"
-    pair_file = OUTPUT / f"{prefix}_pairs.csv"
-    with pair_file.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=audit[0], lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(audit)
-    result["pairs_sha256"] = sha256(pair_file)
-    (OUTPUT / f"{prefix}_validation.json").write_text(
-        json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    save_results(output_dir, prefix, audit, result)
     print(f"Scored {len(pairs)} reciprocal pairs on validation.")
     for name, row in result["models"].items():
         print(name, row["correct_minus_swapped"], row["paired_ci95"])
@@ -211,4 +267,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--topic-only", action="store_true",
                         help="Secondary control: match topic and length without a host requirement.")
-    run(parser.parse_args().topic_only)
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT,
+                        help="Result directory; existing output files are never overwritten.")
+    args = parser.parse_args()
+    run(args.topic_only, args.output_dir)

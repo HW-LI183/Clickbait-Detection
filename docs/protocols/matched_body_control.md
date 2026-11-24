@@ -74,6 +74,15 @@ regression. Repeat with linear SVM. Record confusion matrices, class metrics,
 average precision and individual changes. Encode validation text only after
 train fitting. No new test predictions are made.
 
+Before scoring swaps, each refitted B/C classifier must reproduce its saved
+full-validation Macro-F1 with absolute tolerance `1e-12` and no relative
+tolerance. A mismatch stops the run before result files are written.
+The evaluator refuses existing destination files before loading training data.
+Use `--output-dir` for an independent reproduction; the primary evaluation and
+source audit still come from `output/`. Both result files are staged before
+exclusive creation, and a handled publication failure removes only files
+created by that run.
+
 Draw 2,000 paired bootstrap samples of entire two-article pairs, with
 replacement and seed 20261121. Report percentile 95% intervals conditional on
 the fixed validation matching and fitted models. They omit uncertainty in

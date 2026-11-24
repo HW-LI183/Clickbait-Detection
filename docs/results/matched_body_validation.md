@@ -87,10 +87,17 @@ test predictions.
 ```sh
 python scripts/download_data.py --extract
 python scripts/preprocess_data.py
-python scripts/evaluate_matched_bodies.py
-python scripts/evaluate_matched_bodies.py --topic-only
+python scripts/evaluate_matched_bodies.py --output-dir output/reproduction
+python scripts/evaluate_matched_bodies.py --topic-only --output-dir output/reproduction
 python scripts/summarize_topic_review.py
 ```
+
+The evaluators refuse to overwrite either destination file. Choose a fresh
+output directory for each rerun; the commands above leave published artifacts
+unchanged. They stop if any B/C full-validation Macro-F1 differs from its
+primary reference by more than `1e-12` (absolute tolerance only).
+The review-summary command reads the published pair audits in `output/`,
+not the independent evaluator outputs in `output/reproduction/`.
 
 The published source table supports offline scoring once preprocessing is
 complete. To regenerate source provenance, install `requests` and run
