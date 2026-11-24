@@ -1,0 +1,107 @@
+{
+  "annotator_disagreement": {
+    "definition": "Low and high disagreement use the bottom and top quartiles of the five-annotator judgment standard deviation. Ties at the thresholds are retained. Annotation statistics are used only for descriptive analysis, never as model inputs.",
+    "groups": {
+      "high": {
+        "A_logistic_macro_f1": 0.6735968392040657,
+        "C_logistic_macro_f1": 0.7087894105240191,
+        "C_minus_A": 0.03519257131995346,
+        "rows": 728
+      },
+      "low": {
+        "A_logistic_macro_f1": 0.8320839580209896,
+        "C_logistic_macro_f1": 0.886269055954303,
+        "C_minus_A": 0.0541850979333135,
+        "rows": 736
+      }
+    },
+    "high_threshold_min": 0.33993463423298176,
+    "low_threshold_max": 0.13333333336
+  },
+  "models": {
+    "A/linear_svm": {
+      "correct": 2374,
+      "false_negative": 293,
+      "false_positive": 227,
+      "predicted_clickbait": 632,
+      "predicted_no-clickbait": 2262
+    },
+    "A/logistic_regression": {
+      "correct": 2378,
+      "false_negative": 317,
+      "false_positive": 199,
+      "predicted_clickbait": 580,
+      "predicted_no-clickbait": 2314
+    },
+    "B/linear_svm": {
+      "correct": 2368,
+      "false_negative": 310,
+      "false_positive": 216,
+      "predicted_clickbait": 604,
+      "predicted_no-clickbait": 2290
+    },
+    "B/logistic_regression": {
+      "correct": 2325,
+      "false_negative": 301,
+      "false_positive": 268,
+      "predicted_clickbait": 665,
+      "predicted_no-clickbait": 2229
+    },
+    "C/linear_svm": {
+      "correct": 2429,
+      "false_negative": 267,
+      "false_positive": 198,
+      "predicted_clickbait": 629,
+      "predicted_no-clickbait": 2265
+    },
+    "C/logistic_regression": {
+      "correct": 2433,
+      "false_negative": 293,
+      "false_positive": 168,
+      "predicted_clickbait": 573,
+      "predicted_no-clickbait": 2321
+    }
+  },
+  "transitions": {
+    "B-A/linear_svm": {
+      "corrected": 75,
+      "direction:clickbait -> no-clickbait": 92,
+      "direction:no-clickbait -> clickbait": 64,
+      "introduced": 81,
+      "mean_score_delta_among_changes": -0.0469213310096478,
+      "truth:clickbait": 71,
+      "truth:no-clickbait": 85,
+      "unchanged": 2738
+    },
+    "B-A/logistic_regression": {
+      "corrected": 110,
+      "direction:clickbait -> no-clickbait": 94,
+      "direction:no-clickbait -> clickbait": 179,
+      "introduced": 163,
+      "mean_score_delta_among_changes": 0.3718838946444878,
+      "truth:clickbait": 106,
+      "truth:no-clickbait": 167,
+      "unchanged": 2621
+    },
+    "C-A/linear_svm": {
+      "corrected": 157,
+      "direction:clickbait -> no-clickbait": 131,
+      "direction:no-clickbait -> clickbait": 128,
+      "introduced": 102,
+      "mean_score_delta_among_changes": 0.11803671047444532,
+      "truth:clickbait": 136,
+      "truth:no-clickbait": 123,
+      "unchanged": 2635
+    },
+    "C-A/logistic_regression": {
+      "corrected": 158,
+      "direction:clickbait -> no-clickbait": 134,
+      "direction:no-clickbait -> clickbait": 127,
+      "introduced": 103,
+      "mean_score_delta_among_changes": 0.25475056525641165,
+      "truth:clickbait": 138,
+      "truth:no-clickbait": 123,
+      "unchanged": 2633
+    }
+  }
+}

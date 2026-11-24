@@ -34,6 +34,7 @@ interpreted from the repository root unless they name a sibling protocol.
 | [TF-IDF pre-experiment protocol](docs/protocols/tfidf_preexperiment_protocol.md) | Training-only candidate grid and selection rule. |
 | [Engineered-feature protocol](docs/protocols/engineered_features_protocol.md) | Definitions and train-only fitting for interpretable writing/relationship features. |
 | [TF-IDF pre-experiment results](docs/results/tfidf_preexperiment_results.md) | Selected settings, pilot scores, and integrity checks. |
+| [Frozen primary error analysis](docs/results/primary_error_analysis.md) | Test errors, prediction changes, representative cases, and annotator-disagreement results. |
 
 Machine-readable audits and detailed scores are under
 `data/processed/`, `data/processed/optional/`,
@@ -196,3 +197,43 @@ budget matched within each ablation; record feature settings and paired
 Macro-F1 differences. Use validation for predeclared ablation decisions,
 reserve test for the final evaluation, and label additional comparisons
 exploratory rather than using them to revise the primary C-A/C-B claims.
+
+## Freeze the published primary models
+
+The primary test result in `output/primary_evaluation.json` is frozen. Do not
+use its test scores to retune a classifier, threshold, vectorizer, sample
+rule, or split. The following command rebuilds the six published models from
+their already selected settings, verifies every aggregate metric and changed
+decision against the published result, and only then writes the frozen model
+bundle and per-record test predictions:
+
+```powershell
+python scripts/freeze_primary.py
+```
+
+Use CPython 3.11.9 for exact reproduction. The preprocessing protocol records
+that interpreter, and the deterministic tie ordering in the frozen group split
+is not byte-identical under Python 3.13. The command checks the processed-file
+hashes and stops rather than freezing a different split.
+
+Install the recorded freeze environment for that interpreter before running:
+
+```powershell
+python -m pip install -r requirements-freeze.txt
+```
+
+The command refuses to overwrite `output/frozen_primary/`. Its outputs are:
+
+| File | Purpose |
+| --- | --- |
+| `freeze_manifest.json` | Freeze policy, input and artifact hashes, environment, selected settings, and reproduced scores. |
+| `frozen_models.joblib` | Train-fitted vectorizers, six classifiers, and frozen thresholds. Load only this trusted local artifact. |
+| `test_predictions.jsonl` | Truth label, score, prediction, correctness, and A-to-B/C transition for every held-out test ID. |
+| `reproduced_metrics.json` | Aggregate metrics reproduced from the frozen settings. |
+| `error_analysis_summary.json` | False-positive, false-negative, correction, introduction, and direction counts. |
+| `error_case_candidates.jsonl` | Deterministically selected corrected and introduced cases with short text excerpts for human review. |
+
+Re-running the exact frozen configuration is a reproducibility check, not a
+new model-selection round. Any later body-length, engineered-feature, or
+character-feature experiment must remain secondary or exploratory and must
+not replace the published primary comparison.
