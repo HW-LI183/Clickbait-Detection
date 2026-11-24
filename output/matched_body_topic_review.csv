@@ -1,0 +1,87 @@
+scope,pair,first,second,assessment,reason
+matched_body,1,806660964175093760,812213911483248640,specific,Gift guides for two different audiences.
+matched_body,2,807321412633497600,809883456704565257,overlap,Advance notice and follow-up on the same Ohio memorial for John Glenn.
+matched_body,3,809847810799464448,809860376238034944,broad,Two ABC tweets about presidential reactions to Russia on a social host.
+matched_body,4,805237438373167104,805388435171196928,specific,Travel gift ideas versus gadget gift ideas.
+matched_body,5,808793629871390720,813085654527725569,broad,Christmas tree decoration and a house fire share an object.
+matched_body,6,810567849936908288,813869213416910854,broad,Star Wars film ranking versus an actress's career.
+matched_body,7,804803599364739072,811681665500188672,broad,Unrelated deadly disasters in Tennessee and Mexico.
+matched_body,8,805411582972952576,810092523393847296,broad,Earth-science maps cover two different physical phenomena.
+matched_body,9,807579690760282112,814805552442249216,weak,Car finalists versus pizza-chain geography.
+matched_body,10,804347261631295490,808357666984759296,weak,Vote recount versus demand for leggings.
+matched_body,11,813077867458396160,815191046036606976,weak,An economist obituary versus detention of a journalist.
+matched_body,12,809147222210318336,814872463825833986,specific,Financial planning around the year-end transition with different advice.
+matched_body,13,805173286724374528,806814669533016064,specific,Trump business holdings: Taiwan investment claims versus ownership structures.
+matched_body,14,805506289157730304,807930635629297664,broad,Trump's tariff threat versus a possible cabinet appointee.
+matched_body,15,805736442534260736,806680274528595968,specific,Two accounts of the incoming US administration's cabinet selection.
+matched_body,16,807283195322531840,813020954075009024,broad,Trump's economic advisers versus market forecasts.
+matched_body,17,805749772053282816,810826613600489472,broad,Different electoral processes in Italy and the United States.
+matched_body,18,807416255200317440,811018450785206272,weak,An airline investigation versus a school in Kenya.
+matched_body,19,807973258809241600,812978725960695808,weak,A round-up on demonetisation versus employment for hockey players.
+matched_body,20,809226276850585601,815116429972439040,broad,Separate US rescue incidents.
+matched_body,21,806862865638584320,808706768939446273,weak,Holiday political protest versus headphone availability.
+matched_body,22,808072671774855168,810777702798073856,broad,China policy versus a television parody about Russia.
+matched_body,23,806365721999589376,808891359465771008,weak,A corruption hearing versus exercise associated with a game.
+matched_body,24,804150634169724928,807208947430162432,weak,A Colombian peace accord versus penguin deaths in Canada.
+matched_body,25,810626307222540290,813313018733924352,weak,A snake in a Christmas tree versus a missile launch.
+matched_body,26,809839349407719424,809994052615618564,broad,Two basketball stories connected by the Sacramento Kings.
+matched_body,27,804383339113287680,810624480653508608,broad,College football playoffs versus a professional coach's dismissal.
+matched_body,28,806867948300337152,815234077565603844,broad,A beverage business versus a coffee-shop refill benefit.
+matched_body,29,806501953417211904,809819137300172800,broad,Monetary policy versus gold market movements.
+matched_body,30,811748371442581504,813610613503098880,broad,Business advice for women versus television investment deals.
+matched_body,31,806835722703380480,814858423665905666,weak,Different studies linked by a list-site format.
+matched_body,32,809196321164972033,814592672786763777,specific,Russian election interference: an intelligence source versus US sanctions.
+matched_body,33,804483215561867264,804852252288552960,broad,Historic and contemporary photo round-ups cover different subjects.
+matched_body,34,808314047619862528,814389383046500352,broad,Indian financial policy versus incentives for a technology company.
+matched_body,35,804653751084650496,806211235167473665,broad,Boris Johnson appears in two unrelated foreign-affairs stories.
+matched_body,36,805378641198809088,809329720601014272,specific,India's currency replacement: wedding postponements versus seized new notes.
+matched_body,37,815302770517483521,815337007459303424,weak,Trump playing golf versus habits during holidays.
+matched_body,38,811631048694099969,812312845811675145,weak,A photo retrospective versus Christmas movie recommendations.
+matched_body_topic_only,1,811904258887024640,835498927398977537,weak,Two unrelated podcast storefronts share the same iTunes message.
+matched_body_topic_only,9,835472205802795009,835883773711495168,specific,The suspect's account versus the victim's cause of death in the Kim Jong-nam case.
+matched_body_topic_only,17,841952634059800577,842653499485753344,broad,Distinct stories connected by humorous dancing.
+matched_body_topic_only,26,825143893725442048,825152547195285504,overlap,Both accounts report the same refugee-program suspension.
+matched_body_topic_only,34,825636959812993025,844579558804377600,weak,Two unrelated events presented as photo galleries.
+matched_body_topic_only,42,809498283991322624,810327482272534528,specific,The Charleston massacre verdict versus community responses and forgiveness.
+matched_body_topic_only,50,829130138449215488,830988631896629248,specific,Different coverage around Katy Perry's Grammys performance and new music.
+matched_body_topic_only,59,807428358015451136,808786576155152384,specific,Two distinct features on the film Rogue One.
+matched_body_topic_only,67,824451802041057282,825725441830948864,specific,Repaying student debt versus the implications of a loan-servicer lawsuit.
+matched_body_topic_only,75,809833074783567873,835560697115381760,broad,Buffett's investments versus quotations from a shareholder letter.
+matched_body_topic_only,83,836806978596929536,839509532153872389,broad,Different companies and issues in the cloud-computing industry.
+matched_body_topic_only,92,817270226555281409,839036361222979584,specific,Two different developments in the US funding dispute over Planned Parenthood.
+matched_body_topic_only,100,804304045578027009,845720604464558080,broad,One celebrity in unrelated family and health stories.
+matched_body_topic_only,108,806908955310063616,825114142507950080,specific,Different accounts of Republicans' attempt to replace the Affordable Care Act.
+matched_body_topic_only,116,807869217596809217,838067770763857920,broad,A singer's tribute versus a timeline following his arrest.
+matched_body_topic_only,125,838503202525970433,841293536561623041,specific,Different responses to Trump's wiretapping allegation.
+matched_body_topic_only,133,828211782384746497,828334332918038529,broad,Two stories associated with the Super Bowl but different actors and issues.
+matched_body_topic_only,141,822161558272778241,855451275638583296,broad,An athlete's leadership versus his physical conditioning.
+matched_body_topic_only,149,806672142750334978,806909962379206656,broad,A multi-story anniversary round-up versus an individual flag-burning dispute.
+matched_body_topic_only,157,815580890009047040,818396221719060480,weak,Shared live-video banner on unrelated wildlife and veterans stories.
+matched_body_topic_only,166,805411582972952576,810092523393847296,broad,Different phenomena illustrated by science maps.
+matched_body_topic_only,174,821207833572098048,852256184954478597,specific,Opposing statements over time about NATO's relevance.
+matched_body_topic_only,182,828386499674640384,828422619196174337,overlap,Both reports review advertising at the same Super Bowl.
+matched_body_topic_only,190,820307174262013952,828860967446573056,weak,Two unrelated theft-related stories with a shared site template.
+matched_body_topic_only,199,808009321053294592,833429002756972544,specific,Graham's distinct statements about Russian interference in the election.
+matched_body_topic_only,207,829122878687805441,843152788255358976,broad,A casting suggestion versus national distribution of the same TV show.
+matched_body_topic_only,215,838895859139928064,843517184987090945,specific,Different treatments of that season's top college basketball awards.
+matched_body_topic_only,223,805778005155049473,840607039911034882,weak,A visit to Pearl Harbor versus a private club's membership.
+matched_body_topic_only,232,824039590071861248,849270813719224321,broad,A Russian city connects a cathedral dispute and a subway bombing.
+matched_body_topic_only,240,825387972342214656,852602794641166336,specific,Different practical questions about individual tax refunds.
+matched_body_topic_only,248,842413909860614144,843080364860039172,specific,Committee progress versus a senator's assessment of the same health bill.
+matched_body_topic_only,256,817408697345392640,835286157919342592,specific,A local labor proposal versus federal contracting for the border wall.
+matched_body_topic_only,264,811177553876623360,847347689918414848,specific,Economic contributions of US Dreamers illustrated at national and individual levels.
+matched_body_topic_only,273,826744238679478272,850921237186568192,specific,Different advice pieces about negotiating a pay raise.
+matched_body_topic_only,281,807867677125513216,838875567151845376,specific,"Insurance loss from proposed ACA repeal, examined from different perspectives."
+matched_body_topic_only,289,833005479081164800,833417756217315328,weak,A protest response versus a student fraternity dispute.
+matched_body_topic_only,297,840241891409027072,849557167862579202,weak,A book sales story versus a criminal investigation.
+matched_body_topic_only,306,818494105332367360,827589522800132097,specific,Separate US naval responses to Iranian or Iran-aligned maritime threats.
+matched_body_topic_only,314,808976746057826304,835551368190570502,specific,Arms production versus effects of the battle for Mosul on civilians.
+matched_body_topic_only,322,819685430765428736,827690680050995200,weak,A US police case versus evidence recovered in Mosul.
+matched_body_topic_only,330,826643491820339200,837369420708253697,broad,Different US education-policy disputes in the Trump administration.
+matched_body_topic_only,339,820388172899250178,830220060291657728,specific,Nominations presenters versus announced performers for that Oscar season.
+matched_body_topic_only,347,815234077565603844,852212472186646530,broad,Two different customer-service programs at Starbucks.
+matched_body_topic_only,355,838403739325194241,854200339851083777,broad,A vice president's email complaint versus a foreign visit.
+matched_body_topic_only,363,833605254780444672,854671634485137408,broad,Different security-policy subjects under the Trump administration.
+matched_body_topic_only,372,831473344025337856,838422659432083457,specific,Different European banks seeking to recapitalize.
+matched_body_topic_only,380,834649503693230080,855054250870788096,broad,Unrelated White House stories.
+matched_body_topic_only,388,806154343804272640,814587769984991233,broad,Police officers feature in two unrelated incidents.

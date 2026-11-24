@@ -1,0 +1,68 @@
+{
+  "matched_body": {
+    "assessed_pairs": 38,
+    "assessments": {
+      "specific": 7,
+      "overlap": 1,
+      "broad": 18,
+      "weak": 12
+    },
+    "specific_rows": 14,
+    "clickbait_rows": 7,
+    "models": {
+      "logistic_regression": {
+        "macro_f1": {
+          "B": 0.641025641025641,
+          "C": 0.8571428571428571,
+          "swapped": 0.8571428571428571
+        },
+        "gap": 0.0,
+        "correct_only_with_original": 1,
+        "correct_only_with_swap": 1
+      },
+      "linear_svm": {
+        "macro_f1": {
+          "B": 0.7846153846153847,
+          "C": 0.8571428571428571,
+          "swapped": 0.8571428571428571
+        },
+        "gap": 0.0,
+        "correct_only_with_original": 1,
+        "correct_only_with_swap": 1
+      }
+    }
+  },
+  "matched_body_topic_only": {
+    "assessed_pairs": 48,
+    "assessments": {
+      "weak": 8,
+      "specific": 21,
+      "broad": 17,
+      "overlap": 2
+    },
+    "specific_rows": 42,
+    "clickbait_rows": 8,
+    "models": {
+      "logistic_regression": {
+        "macro_f1": {
+          "B": 0.7142857142857142,
+          "C": 0.9631255487269534,
+          "swapped": 0.8893766461808603
+        },
+        "gap": 0.07374890254609312,
+        "correct_only_with_original": 2,
+        "correct_only_with_swap": 0
+      },
+      "linear_svm": {
+        "macro_f1": {
+          "B": 0.7619433198380567,
+          "C": 0.8979757085020244,
+          "swapped": 0.9292929292929293
+        },
+        "gap": -0.03131722079090493,
+        "correct_only_with_original": 0,
+        "correct_only_with_swap": 1
+      }
+    }
+  }
+}

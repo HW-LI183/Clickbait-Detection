@@ -1,0 +1,244 @@
+{
+  "split": "validation",
+  "match": "same_host_topic_and_length",
+  "source_window_utc": "2016-12",
+  "inputs_sha256": {
+    "records.jsonl": "32565c7f5fbb19c8fe6b43e6aa93bb0087eb95f1cb02db5fada8bbf5b68ed8e8",
+    "split_manifest.jsonl": "bc2beac9643deaed65a9a775f6ab4734fc5136ad7162df7f549c4f7debe212cd"
+  },
+  "sources_sha256": "ef38e7b9b2679374c027563785ccb501c1ad0379b7b00fe68f307ce8f7dd614f",
+  "sklearn": "1.9.1",
+  "primary_sklearn": "1.9.1",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "validation_rows": 2894,
+  "verified_source_rows": 595,
+  "source_evidence": {
+    "canonical": 593,
+    "og:url": 2,
+    "outside_source_window": 2299
+  },
+  "eligible_edges": 102,
+  "pairs": 38,
+  "matched_rows": 76,
+  "matched_clickbait": 24,
+  "matched_nonclickbait": 52,
+  "host_counts": {
+    "abcnews.go.com": 2,
+    "bbc.co.uk": 14,
+    "bleacherreport.com": 2,
+    "bloomberg.com": 2,
+    "breitbart.com": 2,
+    "businessinsider.com": 6,
+    "businessinsider.de": 10,
+    "buzzfeed.com": 6,
+    "espn.com": 2,
+    "finance.yahoo.com": 4,
+    "forbes.com": 2,
+    "indiatimes.com": 4,
+    "indy100.com": 2,
+    "nbcnews.com": 2,
+    "nytimes.com": 2,
+    "telegraph.co.uk": 2,
+    "theguardian.com": 2,
+    "twitter.com": 2,
+    "wsj.com": 8
+  },
+  "topic_cosine": {
+    "min": 0.10008948266163215,
+    "q25": 0.11868926901927068,
+    "median": 0.16240221525206366,
+    "q75": 0.20866108069805972,
+    "max": 0.46031213535473053
+  },
+  "shorter_longer_ratio": {
+    "min": 0.6672932330827067,
+    "q25": 0.7335125513799178,
+    "median": 0.821590909090909,
+    "q75": 0.9231627681554984,
+    "max": 0.9920239282153539
+  },
+  "bootstrap_unit": "disjoint reciprocal pair",
+  "bootstrap_draws": 2000,
+  "seed": 20261121,
+  "models": {
+    "logistic_regression": {
+      "selected": {
+        "B": {
+          "C": 10.0,
+          "threshold": -0.5
+        },
+        "C": {
+          "C": 1.0,
+          "threshold": -0.5
+        }
+      },
+      "full_validation_correct_macro_f1": 0.7689699625413768,
+      "full_validation_B_macro_f1": 0.7336581962272637,
+      "original_validation_macro_f1": {
+        "B": 0.7336581962272637,
+        "C": 0.7689699625413768
+      },
+      "matched_B": {
+        "macro_f1": 0.7317647058823529,
+        "clickbait_precision": 0.6153846153846154,
+        "clickbait_recall": 0.6666666666666666,
+        "clickbait_f1": 0.64,
+        "average_precision": 0.6688419931047964,
+        "confusion_matrix": [
+          [
+            42,
+            10
+          ],
+          [
+            8,
+            16
+          ]
+        ]
+      },
+      "matched_correct_C": {
+        "macro_f1": 0.8042401426590053,
+        "clickbait_precision": 0.72,
+        "clickbait_recall": 0.75,
+        "clickbait_f1": 0.7346938775510204,
+        "average_precision": 0.7852812977047521,
+        "confusion_matrix": [
+          [
+            45,
+            7
+          ],
+          [
+            6,
+            18
+          ]
+        ]
+      },
+      "matched_swapped_C": {
+        "macro_f1": 0.7316718587746625,
+        "clickbait_precision": 0.6666666666666666,
+        "clickbait_recall": 0.5833333333333334,
+        "clickbait_f1": 0.6222222222222222,
+        "average_precision": 0.6833385418843241,
+        "confusion_matrix": [
+          [
+            45,
+            7
+          ],
+          [
+            10,
+            14
+          ]
+        ]
+      },
+      "correct_minus_swapped": 0.07256828388434289,
+      "paired_ci95": [
+        -0.015454139201506067,
+        0.1641527588652768
+      ],
+      "correct_only_with_original": 5,
+      "correct_only_with_swap": 1,
+      "changes_by_pair_label_agreement": {
+        "same": {
+          "pairs": 30,
+          "correct_only_with_original": 1,
+          "correct_only_with_swap": 0
+        },
+        "different": {
+          "pairs": 8,
+          "correct_only_with_original": 4,
+          "correct_only_with_swap": 1
+        }
+      }
+    },
+    "linear_svm": {
+      "selected": {
+        "B": {
+          "C": 0.1,
+          "threshold": -0.25
+        },
+        "C": {
+          "C": 0.1,
+          "threshold": -0.25
+        }
+      },
+      "full_validation_correct_macro_f1": 0.7723445404663033,
+      "full_validation_B_macro_f1": 0.7389503811616613,
+      "original_validation_macro_f1": {
+        "B": 0.7389503811616613,
+        "C": 0.7723445404663033
+      },
+      "matched_B": {
+        "macro_f1": 0.7741232415296215,
+        "clickbait_precision": 0.68,
+        "clickbait_recall": 0.7083333333333334,
+        "clickbait_f1": 0.6938775510204082,
+        "average_precision": 0.7662121655588704,
+        "confusion_matrix": [
+          [
+            44,
+            8
+          ],
+          [
+            7,
+            17
+          ]
+        ]
+      },
+      "matched_correct_C": {
+        "macro_f1": 0.8211764705882353,
+        "clickbait_precision": 0.7307692307692307,
+        "clickbait_recall": 0.7916666666666666,
+        "clickbait_f1": 0.76,
+        "average_precision": 0.8011648678366037,
+        "confusion_matrix": [
+          [
+            45,
+            7
+          ],
+          [
+            5,
+            19
+          ]
+        ]
+      },
+      "matched_swapped_C": {
+        "macro_f1": 0.7741232415296215,
+        "clickbait_precision": 0.68,
+        "clickbait_recall": 0.7083333333333334,
+        "clickbait_f1": 0.6938775510204082,
+        "average_precision": 0.6855586283841386,
+        "confusion_matrix": [
+          [
+            44,
+            8
+          ],
+          [
+            7,
+            17
+          ]
+        ]
+      },
+      "correct_minus_swapped": 0.047053229058613755,
+      "paired_ci95": [
+        -0.03740702860091417,
+        0.13049547805425005
+      ],
+      "correct_only_with_original": 5,
+      "correct_only_with_swap": 2,
+      "changes_by_pair_label_agreement": {
+        "same": {
+          "pairs": 30,
+          "correct_only_with_original": 1,
+          "correct_only_with_swap": 1
+        },
+        "different": {
+          "pairs": 8,
+          "correct_only_with_original": 4,
+          "correct_only_with_swap": 1
+        }
+      }
+    }
+  },
+  "pairs_sha256": "9e7b32e590fb2887b2817c8af0cb1622fc2b5c129ea6d8f7a38a3dd0b305c3d0"
+}
