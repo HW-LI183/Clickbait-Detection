@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-labelledby="title">
+<title id="title">False-positive and false-negative counts</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="70" y="62" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start" fill="#222222">Test classification errors</text>
+<text x="70" y="100" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#555555">False positives and false negatives, n = 2,894</text>
+<line x1="400.0" y1="145" x2="400.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="400.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">0</text>
+<line x1="560.0" y1="145" x2="560.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="560.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">100</text>
+<line x1="720.0" y1="145" x2="720.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="720.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">200</text>
+<line x1="880.0" y1="145" x2="880.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="880.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">300</text>
+<line x1="1040.0" y1="145" x2="1040.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="1040.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">400</text>
+<line x1="1200.0" y1="145" x2="1200.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="1200.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">500</text>
+<line x1="1360.0" y1="145" x2="1360.0" y2="760" stroke="#E2E2E2" stroke-width="2"/>
+<text x="1360.0" y="800" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#555555">600</text>
+<text x="375" y="205" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">A  Logistic regression</text>
+<rect x="400" y="180" width="318.4" height="42" fill="#E69F00"/>
+<rect x="718.4" y="180" width="507.2" height="42" fill="#CC79A7"/>
+<text x="1240.6" y="209" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">516</text>
+<text x="375" y="301" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">A  Linear SVM</text>
+<rect x="400" y="276" width="363.2" height="42" fill="#E69F00"/>
+<rect x="763.2" y="276" width="468.8" height="42" fill="#CC79A7"/>
+<text x="1247.0" y="305" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">520</text>
+<text x="375" y="397" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">B  Logistic regression</text>
+<rect x="400" y="372" width="428.8" height="42" fill="#E69F00"/>
+<rect x="828.8" y="372" width="481.6" height="42" fill="#CC79A7"/>
+<text x="1325.4" y="401" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">569</text>
+<text x="375" y="493" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">B  Linear SVM</text>
+<rect x="400" y="468" width="345.6" height="42" fill="#E69F00"/>
+<rect x="745.6" y="468" width="496.0" height="42" fill="#CC79A7"/>
+<text x="1256.6" y="497" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">526</text>
+<text x="375" y="589" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">C  Logistic regression</text>
+<rect x="400" y="564" width="268.8" height="42" fill="#E69F00"/>
+<rect x="668.8" y="564" width="468.8" height="42" fill="#CC79A7"/>
+<text x="1152.6" y="593" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">461</text>
+<text x="375" y="685" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="end" fill="#222222">C  Linear SVM</text>
+<rect x="400" y="660" width="316.8" height="42" fill="#E69F00"/>
+<rect x="716.8" y="660" width="427.2" height="42" fill="#CC79A7"/>
+<text x="1159.0" y="689" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#222222">465</text>
+<rect x="505" y="850" width="26" height="26" fill="#E69F00"/>
+<text x="545" y="871" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222222">False positive</text>
+<rect x="755" y="850" width="26" height="26" fill="#CC79A7"/>
+<text x="795" y="871" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#222222">False negative</text>
+</svg>

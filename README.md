@@ -34,13 +34,15 @@ interpreted from the repository root unless they name a sibling protocol.
 | [TF-IDF pre-experiment protocol](docs/protocols/tfidf_preexperiment_protocol.md) | Training-only candidate grid and selection rule. |
 | [Engineered-feature protocol](docs/protocols/engineered_features_protocol.md) | Definitions and train-only fitting for interpretable writing/relationship features. |
 | [TF-IDF pre-experiment results](docs/results/tfidf_preexperiment_results.md) | Selected settings, pilot scores, and integrity checks. |
-| [Frozen primary error analysis](docs/results/primary_error_analysis.md) | Test errors, prediction changes, representative cases, and annotator-disagreement results. |
+| [Output index](output/README.md) | Frozen evidence, poster tables and figures, inference timing, and error analysis. |
+| [Frozen primary error analysis](output/report_assets/primary_error_analysis.md) | Test errors, prediction changes, representative cases, and annotator-disagreement results. |
 
 Machine-readable audits and detailed scores are under
 `data/processed/`, `data/processed/optional/`,
 `data/processed/tfidf_preexperiment/`, and
 `data/processed/engineered/`. They are generated locally and excluded
-from Git.
+from Git. Final evaluation files that belong in the poster or report are
+indexed in `output/README.md`.
 
 ## Preprocessing
 
@@ -198,7 +200,40 @@ Macro-F1 differences. Use validation for predeclared ablation decisions,
 reserve test for the final evaluation, and label additional comparisons
 exploratory rather than using them to revise the primary C-A/C-B claims.
 
-## Freeze the published primary models
+## Formal frozen evaluation
+
+Use CPython 3.11.9. Install the recorded environment for that interpreter:
+
+```powershell
+py -3.11 -m pip install -r requirements-freeze.txt
+```
+
+After downloading and preprocessing the data, run the formal evaluation from
+the repository root:
+
+```powershell
+$env:OPENBLAS_NUM_THREADS = "1"
+$env:OMP_NUM_THREADS = "1"
+py -3.11 scripts/report_primary.py --warmups 2 --repeats 10
+```
+
+This command loads the frozen model bundle, reconstructs the complete test
+input, and verifies every score and class decision against
+`output/frozen_primary/test_predictions.jsonl`. It then measures all six
+models and writes the main result tables, poster-ready SVG figures, complete
+timing records, and an artifact manifest to `output/report_assets/`.
+
+The timing report separates one-time model and data loading from repeated
+inference. End-to-end inference includes TF-IDF transformation, sparse block
+assembly, classifier scoring, and thresholding. The JSON file retains every
+repeat and the machine environment because inference time depends on the
+computer used.
+
+See `output/README.md` for a complete output index. Use the SVG files in a
+poster because they remain sharp when resized; use the CSV or Markdown tables
+in the written report.
+
+## Rebuild the published freeze
 
 The primary test result in `output/primary_evaluation.json` is frozen. Do not
 use its test scores to retune a classifier, threshold, vectorizer, sample
@@ -208,19 +243,13 @@ decision against the published result, and only then writes the frozen model
 bundle and per-record test predictions:
 
 ```powershell
-python scripts/freeze_primary.py
+py -3.11 scripts/freeze_primary.py
 ```
 
-Use CPython 3.11.9 for exact reproduction. The preprocessing protocol records
-that interpreter, and the deterministic tie ordering in the frozen group split
-is not byte-identical under Python 3.13. The command checks the processed-file
-hashes and stops rather than freezing a different split.
-
-Install the recorded freeze environment for that interpreter before running:
-
-```powershell
-python -m pip install -r requirements-freeze.txt
-```
+The preprocessing protocol records CPython 3.11.9, and the deterministic tie
+ordering in the frozen group split is not byte-identical under Python 3.13.
+The command checks the processed-file hashes and stops rather than freezing a
+different split.
 
 The command refuses to overwrite `output/frozen_primary/`. Its outputs are:
 
@@ -232,6 +261,12 @@ The command refuses to overwrite `output/frozen_primary/`. Its outputs are:
 | `reproduced_metrics.json` | Aggregate metrics reproduced from the frozen settings. |
 | `error_analysis_summary.json` | False-positive, false-negative, correction, introduction, and direction counts. |
 | `error_case_candidates.jsonl` | Deterministically selected corrected and introduced cases with short text excerpts for human review. |
+
+The repository already contains `output/frozen_primary/`, so the rebuild
+command refuses to replace it. Use that command only when reproducing the
+freeze into an empty output directory, for example with `--output-dir` set to
+a separate verification path. Use `report_primary.py` for the routine formal
+evaluation command.
 
 Re-running the exact frozen configuration is a reproducibility check, not a
 new model-selection round. Any later body-length, engineered-feature, or
