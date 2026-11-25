@@ -1,0 +1,404 @@
+{
+  "cold_start": {
+    "combined_load_and_prepare_ms": 648.9854,
+    "model_bundle_load_ms": 112.4809,
+    "note": "Single observations; operating-system file caching can affect them.",
+    "test_data_load_and_prepare_ms": 536.5045
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "joblib": "1.5.2",
+    "logical_cpu_count": 16,
+    "machine": "AMD64",
+    "numpy": "2.3.4",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.16.3"
+  },
+  "measured_at_utc": "2026-11-24T08:50:43.737001+00:00",
+  "models": {
+    "A/linear_svm": {
+      "classifier_and_threshold_ms": {
+        "max": 0.3645,
+        "mean": 0.24070999999999998,
+        "median": 0.21615,
+        "min": 0.2053,
+        "raw": [
+          0.2053,
+          0.2062,
+          0.2105,
+          0.2139,
+          0.2142,
+          0.2181,
+          0.2194,
+          0.269,
+          0.286,
+          0.3645
+        ],
+        "stdev": 0.0515534339841252
+      },
+      "end_to_end_ms": {
+        "max": 34.3315,
+        "mean": 32.117219999999996,
+        "median": 32.36835,
+        "min": 30.3716,
+        "raw": [
+          30.3716,
+          30.7332,
+          30.8762,
+          30.9648,
+          31.8577,
+          32.879,
+          32.9251,
+          33.0739,
+          33.1592,
+          34.3315
+        ],
+        "stdev": 1.3348003344653787
+      },
+      "feature_transform_ms": {
+        "max": 34.1121,
+        "mean": 31.876510000000003,
+        "median": 32.07915,
+        "min": 30.1663,
+        "raw": [
+          30.1663,
+          30.527,
+          30.662,
+          30.7467,
+          31.6438,
+          32.5145,
+          32.6561,
+          32.7879,
+          32.9487,
+          34.1121
+        ],
+        "stdev": 1.31421849143216
+      },
+      "median_ms_per_sample": 0.011184640635798203,
+      "median_samples_per_second": 89408.3263434806
+    },
+    "A/logistic_regression": {
+      "classifier_and_threshold_ms": {
+        "max": 1.0699,
+        "mean": 0.30123,
+        "median": 0.21860000000000002,
+        "min": 0.201,
+        "raw": [
+          0.201,
+          0.204,
+          0.2059,
+          0.2106,
+          0.217,
+          0.2202,
+          0.2247,
+          0.227,
+          0.232,
+          1.0699
+        ],
+        "stdev": 0.27028281093863316
+      },
+      "end_to_end_ms": {
+        "max": 36.642,
+        "mean": 32.47869,
+        "median": 31.67705,
+        "min": 29.8146,
+        "raw": [
+          29.8146,
+          29.9155,
+          30.3625,
+          31.3054,
+          31.6279,
+          31.7262,
+          31.8633,
+          35.7067,
+          35.8228,
+          36.642
+        ],
+        "stdev": 2.5847253911521566
+      },
+      "feature_transform_ms": {
+        "max": 36.4173,
+        "mean": 32.177459999999996,
+        "median": 31.45845,
+        "min": 29.5876,
+        "raw": [
+          29.5876,
+          29.7115,
+          30.1519,
+          31.1044,
+          31.4109,
+          31.506,
+          31.6313,
+          34.7529,
+          35.5008,
+          36.4173
+        ],
+        "stdev": 2.4728115196180136
+      },
+      "median_ms_per_sample": 0.010945767104353837,
+      "median_samples_per_second": 91359.51737930143
+    },
+    "B/linear_svm": {
+      "classifier_and_threshold_ms": {
+        "max": 0.3312,
+        "mean": 0.26258,
+        "median": 0.2573,
+        "min": 0.2345,
+        "raw": [
+          0.2345,
+          0.2376,
+          0.2386,
+          0.2525,
+          0.2554,
+          0.2592,
+          0.2598,
+          0.271,
+          0.286,
+          0.3312
+        ],
+        "stdev": 0.028844286936738246
+      },
+      "end_to_end_ms": {
+        "max": 71.0428,
+        "mean": 63.822410000000005,
+        "median": 62.4901,
+        "min": 59.5493,
+        "raw": [
+          59.5493,
+          60.2652,
+          60.699,
+          60.9412,
+          61.3697,
+          63.6105,
+          64.0315,
+          68.0678,
+          68.6471,
+          71.0428
+        ],
+        "stdev": 4.062151668061316
+      },
+      "feature_transform_ms": {
+        "max": 70.8042,
+        "mean": 63.55983,
+        "median": 62.24505,
+        "min": 59.2633,
+        "raw": [
+          59.2633,
+          60.0098,
+          60.3678,
+          60.682,
+          61.1172,
+          63.3729,
+          63.7605,
+          67.8333,
+          68.3873,
+          70.8042
+        ],
+        "stdev": 4.077354886047787
+      },
+      "median_ms_per_sample": 0.021592985487214927,
+      "median_samples_per_second": 46311.33571557735
+    },
+    "B/logistic_regression": {
+      "classifier_and_threshold_ms": {
+        "max": 0.5147,
+        "mean": 0.28342,
+        "median": 0.253,
+        "min": 0.2341,
+        "raw": [
+          0.2341,
+          0.2372,
+          0.2416,
+          0.2462,
+          0.249,
+          0.257,
+          0.2586,
+          0.2906,
+          0.3052,
+          0.5147
+        ],
+        "stdev": 0.08447099173352025
+      },
+      "end_to_end_ms": {
+        "max": 67.77,
+        "mean": 62.766290000000005,
+        "median": 62.168049999999994,
+        "min": 59.5914,
+        "raw": [
+          59.5914,
+          60.3986,
+          60.8023,
+          61.3741,
+          61.8317,
+          62.5044,
+          63.5736,
+          63.7985,
+          66.0183,
+          67.77
+        ],
+        "stdev": 2.5766745737049854
+      },
+      "feature_transform_ms": {
+        "max": 67.5238,
+        "mean": 62.482870000000005,
+        "median": 61.92275,
+        "min": 59.3573,
+        "raw": [
+          59.3573,
+          60.14,
+          60.5651,
+          61.1171,
+          61.5901,
+          62.2554,
+          63.2684,
+          63.5079,
+          65.5036,
+          67.5238
+        ],
+        "stdev": 2.5353874759973944
+      },
+      "median_ms_per_sample": 0.021481703524533515,
+      "median_samples_per_second": 46551.24296161775
+    },
+    "C/linear_svm": {
+      "classifier_and_threshold_ms": {
+        "max": 3.0416,
+        "mean": 2.09859,
+        "median": 1.992,
+        "min": 1.5944,
+        "raw": [
+          1.5944,
+          1.6536,
+          1.8499,
+          1.8659,
+          1.9199,
+          2.0641,
+          2.0853,
+          2.3953,
+          2.5159,
+          3.0416
+        ],
+        "stdev": 0.4413317760546543
+      },
+      "end_to_end_ms": {
+        "max": 1264.7314,
+        "mean": 1196.6241,
+        "median": 1188.7946,
+        "min": 1136.7087,
+        "raw": [
+          1136.7087,
+          1165.8761,
+          1171.5539,
+          1178.5847,
+          1183.56,
+          1194.0292,
+          1194.0989,
+          1220.6787,
+          1256.4194,
+          1264.7314
+        ],
+        "stdev": 40.09116886403343
+      },
+      "feature_transform_ms": {
+        "max": 1261.6898,
+        "mean": 1194.52551,
+        "median": 1186.8346000000001,
+        "min": 1134.8428,
+        "raw": [
+          1134.8428,
+          1164.0262,
+          1169.4686,
+          1176.0688,
+          1181.9656,
+          1191.7036,
+          1192.1093,
+          1219.0251,
+          1254.3553,
+          1261.6898
+        ],
+        "stdev": 39.89313611948388
+      },
+      "median_ms_per_sample": 0.4107790601243953,
+      "median_samples_per_second": 2434.3986757678745
+    },
+    "C/logistic_regression": {
+      "classifier_and_threshold_ms": {
+        "max": 3.0015,
+        "mean": 2.03535,
+        "median": 1.9425,
+        "min": 1.5785,
+        "raw": [
+          1.5785,
+          1.7088,
+          1.8077,
+          1.8223,
+          1.9097,
+          1.9753,
+          1.991,
+          2.028,
+          2.5307,
+          3.0015
+        ],
+        "stdev": 0.42331941775028986
+      },
+      "end_to_end_ms": {
+        "max": 1245.6077,
+        "mean": 1207.5299499999999,
+        "median": 1212.4335999999998,
+        "min": 1169.9601,
+        "raw": [
+          1169.9601,
+          1171.0156,
+          1177.4071,
+          1182.5218,
+          1196.8307,
+          1228.0365,
+          1230.6708,
+          1233.105,
+          1240.1442,
+          1245.6077
+        ],
+        "stdev": 30.760299189964204
+      },
+      "feature_transform_ms": {
+        "max": 1243.8989,
+        "mean": 1205.4946,
+        "median": 1210.64885,
+        "min": 1167.9321,
+        "raw": [
+          1167.9321,
+          1168.4849,
+          1175.4318,
+          1179.5203,
+          1194.8397,
+          1226.458,
+          1228.8485,
+          1231.2973,
+          1238.2345,
+          1243.8989
+        ],
+        "stdev": 31.037722248257854
+      },
+      "median_ms_per_sample": 0.41894733932273664,
+      "median_samples_per_second": 2386.934839153254
+    }
+  },
+  "protocol": {
+    "batch_size": 2894,
+    "clock": "time.perf_counter_ns",
+    "end_to_end_definition": "TF-IDF transformation of the required fields, sparse block assembly, classifier decision_function, and frozen thresholding",
+    "excluded_from_end_to_end": [
+      "model bundle loading",
+      "processed JSONL reading",
+      "test text list preparation"
+    ],
+    "independent_model_runs": true,
+    "repeats": 10,
+    "verification": "Every warm-up and measured repeat must reproduce all frozen decision scores within absolute tolerance 1e-12 and every class decision exactly.",
+    "warmups": 2
+  }
+}
